@@ -2,7 +2,7 @@ package com.example.footballmanager.controller;
 
 import com.example.footballmanager.dto.PlayerRequestDto;
 import com.example.footballmanager.dto.PlayerResponseDto;
-import com.example.footballmanager.mappers.PlayerMapper;
+import com.example.footballmanager.mapper.PlayerMapper;
 import com.example.footballmanager.model.Player;
 import com.example.footballmanager.service.PlayerService;
 import com.example.footballmanager.service.TeamService;

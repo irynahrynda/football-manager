@@ -2,7 +2,7 @@ package com.example.footballmanager.service.impl;
 
 import com.example.footballmanager.dto.TransferRequestDto;
 import com.example.footballmanager.dto.TransferResponseDto;
-import com.example.footballmanager.mappers.TransferMapper;
+import com.example.footballmanager.mapper.TransferMapper;
 import com.example.footballmanager.model.Player;
 import com.example.footballmanager.model.Team;
 import com.example.footballmanager.model.Transfer;

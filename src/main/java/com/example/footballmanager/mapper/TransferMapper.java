@@ -1,4 +1,4 @@
-package com.example.footballmanager.mappers;
+package com.example.footballmanager.mapper;
 
 import com.example.footballmanager.dto.TransferResponseDto;
 import com.example.footballmanager.model.Transfer;
