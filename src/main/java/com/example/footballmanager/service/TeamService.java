@@ -4,11 +4,11 @@ import com.example.footballmanager.model.Team;
 import java.util.List;
 
 public interface TeamService {
-    Team createTeam(Team teamR);
+    Team createTeam(Team team);
 
     Team getTeamById(Long id);
 
     List<Team> getAllTeams();
 
-    void deleteTeamById(Long id);
+    String deleteTeamById(Long id);
 }

@@ -70,7 +70,7 @@ public class PlayerController {
     }
 
     @DeleteMapping("/{id}")
-    public void deletePlayerById(@PathVariable Long id) {
-        playerService.deletePlayerById(id);
+    public String deletePlayerById(@PathVariable Long id) {
+        return playerService.deletePlayerById(id);
     }
 }
