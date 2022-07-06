@@ -41,7 +41,8 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Transactional
     @Override
-    public void deletePlayerById(Long id) {
+    public String deletePlayerById(Long id) {
         playerRepository.deleteById(id);
+        return "Player by id " + id + " was deleted";
     }
 }
