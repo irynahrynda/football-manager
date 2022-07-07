@@ -13,5 +13,5 @@ public interface PlayerService {
 
     List<Player> getAllPlayersByTeam(Team team);
 
-    String deletePlayerById(Long id);
+    void deletePlayerById(Long id);
 }

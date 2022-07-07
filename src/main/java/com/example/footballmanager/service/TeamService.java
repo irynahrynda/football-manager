@@ -10,5 +10,5 @@ public interface TeamService {
 
     List<Team> getAllTeams();
 
-    String deleteTeamById(Long id);
+    void deleteTeamById(Long id);
 }
