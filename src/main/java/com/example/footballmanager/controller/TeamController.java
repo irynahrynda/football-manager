@@ -38,11 +38,13 @@ public class TeamController {
     }
 
     @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public TeamResponseDto getById(@PathVariable Long id) {
         return teamMapper.mapToDto(teamService.getTeamById(id));
     }
 
     @GetMapping
+    @ResponseStatus(HttpStatus.OK)
     public List<TeamResponseDto> getAllTeams() {
         return teamService.getAllTeams()
                 .stream()
@@ -51,6 +53,7 @@ public class TeamController {
     }
 
     @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public TeamResponseDto updateTeam(@PathVariable Long id,
                                      @Valid @RequestBody TeamRequestDto teamRequestDto) {
         Team team = teamMapper.mapToModel(teamRequestDto);
@@ -59,6 +62,7 @@ public class TeamController {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public String deleteTeamById(@PathVariable Long id) {
         teamService.deleteTeamById(id);
         return "Team by id " + id + " is deleted";
