@@ -3,7 +3,7 @@
 This application is implemented as a football manager service.
 - --
 
-### Available endpoints in the project:
+### Available endpoints:
 - /teams - CRUD operations
 - /players - CRUD operations
 - /transfers - transfer operation
