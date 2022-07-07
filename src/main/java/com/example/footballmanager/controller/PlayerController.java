@@ -43,11 +43,13 @@ public class PlayerController {
     }
 
     @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public PlayerResponseDto getById(@PathVariable Long id) {
         return playerMapper.mapToDto(playerService.getPlayerById(id));
     }
 
     @GetMapping
+    @ResponseStatus(HttpStatus.OK)
     public List<PlayerResponseDto> getAllPlayers() {
         return playerService.getAllPlayers().stream()
                 .map(playerMapper::mapToDto)
@@ -55,6 +57,7 @@ public class PlayerController {
     }
 
     @GetMapping("/team/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public List<PlayerResponseDto> getAllPlayersByTeam(@PathVariable Long id) {
         return playerService.getAllPlayersByTeam(teamService.getTeamById(id)).stream()
                 .map(playerMapper::mapToDto)
@@ -62,6 +65,7 @@ public class PlayerController {
     }
 
     @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public PlayerResponseDto updatePlayer(@PathVariable Long id,
                                           @Valid @RequestBody PlayerRequestDto playerRequestDto) {
         Player player = playerMapper.mapToModel(playerRequestDto);
@@ -70,6 +74,7 @@ public class PlayerController {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public String deletePlayerById(@PathVariable Long id) {
         return playerService.deletePlayerById(id);
     }
